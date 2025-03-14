@@ -5,4 +5,4 @@ additional text to the README file.
 
 ## A subsection
 
-With some more text.
+With some more text and text added directly on GitHub.
