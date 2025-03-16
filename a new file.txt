@@ -1,2 +1,49 @@
 This is a new file.
 I just created it in the project.
+
+# Why use Git and GitHub with RE-Briefs?
+
+We have set up an efficient production workflow for the production of books for the series "For the pro"Real Estate Briefs". This workflow requires the author(s)
+
+-   to write the manuscript with Quarto (<https://www.quarto.org>), and
+-   to use Git and GitHub for version control and for the exchange of the manuscript with the editors.
+
+In this document, we will explain why we require the author(s) to use Git and GitHub and give step-by-step instructions for installation, setup, and use of these tools.
+
+Although Git and GitHub have not been developed with academic publishing and the production of manuscripts in mind, they are extremely useful in this context; in particular with a workflow like the one we have set up. Git and GitHub fit well to our workflow because the workflow is almost exclusively using plain text files. Since Git and GitHub were developed for the the development and management of program code, which usually resides in plain text files, the two tasks fit very well.
+
+## What are Git and GitHub?
+
+Git and GitHub are two separate tools running on two different computing systems. Together they provide the services that we want to utilize in our publication project. **Git** runs on your local computer. **GitHub** on the other side, is a cloud based service that you can access via a web-browser. Once properly set up, the two tools integrate seemlessly so that you can just view them as one tool. Moreover, RStudio provides support for Git and GitHub. Therefore, when you use RStudio for writing your manuscript, you can use all the relevant services of Git and GitHub right from RStudio, and therefore, once everything is installed and set up, may not even have to use ever enter a single Git-command or open the GitHub homepage.
+
+## What are the services of Git?
+
+Git is a *version control system*. At any time in the process of writing the manuscript for your volume in RE-Briefs, you can use Git to save the current status of your work. In the Git-jargon, this saved status is called a **commit**. These commits accumulate on your computer and are managed (very efficiently) by Git. If something goes wrong (say, you accidentally deleted an important file, or you made a change that broke the embedded R-code), you can always go back to an earlier commit, retrieve the deleted file or let Git show you the changes you have made.
+
+It is quite common in software development that one programmer works on a specific feature of a larger project. This requires a lot of testing, trial and error, debugging, etc. These steps should be done in a separate development environment and not break the main code of the project. For such tasks, Git allows one to split off a **branch** from the main development task. The programmer can then do all the development, testing, and debugging in this branch without distrubing others. When the feature is fully developed and tested, she then **merges** the branch back into the main project so that the new feature becomes part of the project. This is a feature you may or may not want to use (e.g., with different authors working on separate sections). In any case, you should know it exists.
+
+Git is much more powerful than that and offers a large number of commands. If you want to know more, consult the documentation at <https://git-scm.com/doc>. There are also many tutorials availabe on YouTube. As an author of a volume of RE-Briefs you will only need a tiny subset of these commands and we will mention them below in the step-by-step instructions.
+
+## What are the services of GitHub?
+
+Git provides efficient version control, but stores all its information on your local computer. So, when your hard drive crashes, chances are high that not only your work, but also all your commits are lost. You can use GitHub to protect yourself against this risk. When things are set up properly, you can **push** your work and the full record of Git commits to a GitHub **repository**. In essence, this is just a backup of your local work in the cloud. So, if your local hard drive crashes, you can recreate your work and its work history by **pulling** the repository from GitHub to your new local drive.
+
+As you may have guessed by now, GitHub offers much more than just backup storage. The real strength of the tool is in collaboration. It is not just you who may access the repository, you may also give access to your co-authors and the editors of RE-Briefs. You may even make your repository publicly accessible. In this case, everybody can find your project, download and use it, develop new features, improve existing parts of the code, etc. This is how many Open Source projects are managed. Also a lot of "finally developed" Open Source software, R-packages, Quarto extensions, and such are provided and distributed through GitHub repositories.
+
+Of course, not everybody can simply go into a repository and change or delete the files there. GitHub offers a whole set of features that protect stored work from misuse. They are related to terms like **pull request**, **issue**, **fork** and such. Again, there is a rich set of features. For more information, check the GitHub documentation at <https://docs.github.com/en> or watch some of the numerous tutorials on YouTube.
+
+# Setting things up
+
+Now that we have clarified the basics, let us begin setting things up. We will proceed in the following steps:
+
+1.  Check whether Git needs to be installed
+2.  Install Git, if necessary
+3.  Update Git, if necessary
+4.  Configure Git
+4.  Register a GitHub account
+
+## Check whether Git needs to be installed
+
+Since some operating systems come with Git already installed, it makes sense to check whether or not Git is already installed on your local computer. The first barriere for non-programmers may be the request to `open a terminal`. A **terminal** is available on all operating systems, but sometimes the OS designers try to hide it from the user.
+
+
